@@ -15,3 +15,17 @@
 #include <functional>
 #include <fstream>
 #include <climits>
+
+static const int DIMS = 16;   // demo vectors
+// Doc embeddings dimension is determined at runtime from Ollama's model output
+
+// =====================================================================
+//  DATA TYPES
+// =====================================================================
+
+struct VectorItem {
+    int id;
+    std::string metadata;
+    std::string category;
+    std::vector<float> emb;
+};
